@@ -6,9 +6,9 @@ import java.util.Scanner;
  */
 public class Main {
     //public static String PrintResult(int userInput){
-        //if(userInput < 5){
-            //System.out.println("too small")
-       // }
+    //if(userInput < 5){
+    //System.out.println("too small")
+    // }
     //}
     public static void main(String[] args){
         System.out.println("Zipcode rocks!");
@@ -23,15 +23,21 @@ public class Main {
         int userInputCount = 0;
         userInputCount++;
         System.out.println(userInputCount);
+        boolean correctGuess = false;
+        while (!correctGuess) {
 
-        if (userInput < randomNum1){
-            System.out.println("too small");
+             if  (userInput == randomNum1) {
+                System.out.println("correct guess");
+            } else if (userInput > randomNum1) {
+                System.out.println("too large"); }
+               else if (userInput < randomNum1)
+                {System.out.println("too small");
+            }
 
-    }   else if (userInput > randomNum1) {
-            System.out.println("too large");
-
-}      else if (userInput == randomNum1) {
-            System.out.println("correct guess");
+            }
         }
+
     }
-}
+
+
+
