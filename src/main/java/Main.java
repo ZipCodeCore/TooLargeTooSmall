@@ -20,6 +20,9 @@ public class Main {
         Math.random();
         Random num = new Random();
         int randomNum1 = num.nextInt(10);
+        int userInputCount = 0;
+        userInputCount++;
+        System.out.println(userInputCount);
 
         if (userInput < randomNum1){
             System.out.println("too small");
