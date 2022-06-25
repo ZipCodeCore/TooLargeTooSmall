@@ -2,41 +2,38 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class  Main {
-
     public static void main(String[] args){
-        assignNum();
-        System.out.println("My Guess is:");
-        while(correctNum != guess){
-            guess = Integer.parseInt(myScanner.nextLine());
-            checkGuess(guess);
+        generateWinningNum();
+        System.out.println("I'm thinking of a number between 1 and " + maxNumber + ", type a guess");
+       // int numOfGuess = 0;
+        while(winningNum != guess){
+            int input = Integer.parseInt(myScanner.nextLine());
+            if(input != guess){
+                numOfGuess++;
+            }
+            guess = input;
+            checkGuess();
         }
-
-        System.out.println(guess);
-        System.out.println(correctNum);
     }
-    public static int numOfGuess;
+    public static int numOfGuess = 0;
     public static Scanner myScanner = new Scanner(System.in);
-    public static int correctNum;
+    public static int winningNum;
     public static int maxNumber = 100;
     public static int guess;
 
-    public static void checkGuess(int guess){
-        if(guess > correctNum ){
-            System.out.println("To high try again!");
-        } else if(guess < correctNum){
-            System.out.println("To low try again");
+    public static void checkGuess(){
+        if(guess > winningNum){
+            System.out.println("Too high try again!");
+        } else if(guess < winningNum){
+            System.out.println("Too low try again");
         }else{
-            System.out.println("Tell em what he's won johnny!");
+            System.out.println("Tell em what he's won johnny! It took you " + numOfGuess + " tries " );
         }
-
     }
-    public static void assignNum(){
+    public static void generateWinningNum(){
         Random rand = new Random();
-        correctNum = rand.nextInt(maxNumber);
+        winningNum = rand.nextInt(maxNumber);
     }
-
-
-
 
 
 }
