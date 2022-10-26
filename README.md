@@ -18,10 +18,8 @@
     * Method invokation
 
 ### **Resources:**
-* [Fundamental Programming Structures](https://zipcoder.github.io/reveal-slides/fundament-programing-stuctures.html#/)
+* [Fundamental Programming Structures](https://zipcoder.github.io/curriculum-assets/lectures/java/fundamentals/control-flow/lecture.html#/)
 
 ## Unit Test
 No Unit Test
 
-## What's Next?
-* The next lab can be found [here](https://github.com/Zipcoder/ZCW-MicroLabs-JavaFundamentals-SumOrProduct)
